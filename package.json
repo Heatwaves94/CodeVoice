@@ -3,15 +3,35 @@
   "version": "0.1.0",
   "description": "Multilingual voice interface for software development — AssemblyAI Hackathon 2026",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "codevoice": "dist/cli.js"
   },
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heatwaves94/CodeVoice.git"
+  },
+  "keywords": [
+    "voice",
+    "developer-tools",
+    "speech-to-text",
+    "assemblyai",
+    "gemini",
+    "cli",
+    "tui",
+    "multilingual",
+    "hinglish"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "prepublishOnly": "npm run build",
     "dev": "ts-node src/cli.ts",
     "start": "node dist/cli.js",
     "phase0": "ts-node scripts/phase0-probe.ts",
